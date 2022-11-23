@@ -1,17 +1,21 @@
 <template>
   <BContainer>
-
-    <div class="mb-3 mt-3">
+    <HeaderComponent/>
+    <!-- <div class="mb-3 mt-3">
       <router-link class="p-2" to="/">Главная</router-link>
-
-    </div>
+    </div> -->
     <router-view class="main-view"></router-view>
+
   </BContainer>
 </template>
 
 <script>
+import HeaderComponent from './components/HeaderComponent';
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderComponent,
+  }
 }
 </script>
 
