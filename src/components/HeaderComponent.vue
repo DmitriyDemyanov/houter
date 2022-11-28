@@ -56,11 +56,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0.75rem;
+  right: 0.75rem;
 }
 
 .pr-14 {
