@@ -1,23 +1,34 @@
 export default {
   namespaced: true,
   state: {
-    list: {
-      url: '',
-      img: '',
-    }
+    partnersList: [
+      {
+        url: 'https://google.com',
+        img: 'partner-1.svg'
+      },
+      {
+        url: 'https://bing.com',
+        img: 'partner-2.svg'
+      },
+      {
+        url: 'https://samsung.com',
+        img: 'partner-3.svg'
+      },
+      {
+        url: 'https://apple.com',
+        img: 'partner-4.svg'
+      },
+    ]
 
   },
   getters: {
-    partnerList({ list }) {
-      return list;
+    partnerList({ partnersList }) {
+      return partnersList;
     }
+
   },
-  mutations:{
-    SAVE_PARTNERS(state, payload) {
-      console.log(state);
-      console.log(payload);
-    }
-  },
+  mutations:{},
+
   actions: {},
 
 };

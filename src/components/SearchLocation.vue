@@ -1,5 +1,5 @@
 <template>
-  <div class="col-5 p-0">
+  <div class=" p-0">
     <b-input-group class="mt-3 position-relative input-main">
       <img class="pin" src="@/assets/pin.svg" alt="">
       <b-form-input placeholder="Search for the location you want!"></b-form-input>

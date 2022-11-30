@@ -5,46 +5,39 @@
         <img src="@/assets/main-text.svg" alt="text">
       </div>
       <p class="main-description">Everything you need about finding your place to live will be here, where it will be easier for you</p>
-    </div>
-    <div class="offset-1 col-6 main-image"></div>
-    <SearchLocation/>
+
+      <SearchLocation/>
+
     <p class="subtitle-main">Our Partnership</p>
-    <div class="d-flex col-5 justify-content-between">
-    <span v-for="(url, img) in partners" :key='img'>
-      <PartnerLink :partnerList ='url.url' :partnerImg ='url.img'/>
+    <div class="d-flex justify-content-between align-items-center">
+    <span v-for="(item, idx) in partnerList" :key='idx'>
+      <PartnerLink :partnerList ='item.url' :partnerImg ='item.img'/>
     </span>
   </div>
+
+
+
+    </div>
+
+
+    <div class="offset-1 col-6 main-image">
+    </div>
+
+
+
   </BRow>
 </template>
 
 <script>
 import PartnerLink from '@/components/PartnerLink';
 import SearchLocation from '@/components/SearchLocation'
-export default {
+import { mapGetters } from 'vuex';
 
+export default {
   name: 'MainSection',
-  data() {
-    return {
-      partners: [
-        {
-          url: 'https://google.com',
-          img: 'partner-1.svg'
-        },
-        {
-          url: 'https://bing.com',
-          img: 'partner-2.svg'
-        },
-        {
-          url: 'https://samsung.com',
-          img: 'partner-3.svg'
-        },
-        {
-          url: 'https://apple.com',
-          img: 'partner-4.svg'
-        },
-      ]
-    };
-  },
+  computed: {
+      ...mapGetters('partners', ['partnerList'])
+    },
   components: {
     SearchLocation,
     PartnerLink,
@@ -60,6 +53,7 @@ export default {
 .main-description {
   padding: 0;
   margin-top: 24px;
+  margin-bottom: 32px;
   color: #626687;
   opacity: 0.75;
   font-weight: 400;
@@ -67,7 +61,8 @@ export default {
   line-height: 28px;
 }
 .main-image {
-  background: #626687;
+  background: url('@/assets/image6.png');
+  border-radius: 0px 0px 0px 80px;
 }
 .subtitle-main {
   padding: 0;
