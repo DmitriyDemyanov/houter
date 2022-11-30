@@ -56,6 +56,28 @@ export default {
         ]
       }
     ],
+    houserooms: [
+      {
+        id: 1,
+        img: 'bed.svg',
+        place: '4 Bedrooms',
+      },
+      {
+        id: 2,
+        img: 'bathroom.svg',
+        place: '2 Bathrooms',
+      },
+      {
+        id: 3,
+        img: 'carport.svg',
+        place: '1 carport',
+      },
+      {
+        id: 4,
+        img: 'floor.svg',
+        place: '2 floors',
+      },
+    ]
   },
   getters: {
     houseList({estatesList}) {
@@ -66,7 +88,10 @@ export default {
     },
     onHouseName({houseName}) {
       return houseName;
-    }
+    },
+    onHouseRooms({houserooms}) {
+      return houserooms;
+    },
   },
 
 
