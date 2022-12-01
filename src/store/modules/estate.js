@@ -77,7 +77,8 @@ export default {
         img: 'floor.svg',
         place: '2 floors',
       },
-    ]
+    ],
+    estateTypes: ['house', 'villa', 'appartment']
   },
   getters: {
     houseList({estatesList}) {
@@ -92,6 +93,9 @@ export default {
     onHouseRooms({houserooms}) {
       return houserooms;
     },
+    types({estateTypes}) {
+      return estateTypes;
+    }
   },
 
 

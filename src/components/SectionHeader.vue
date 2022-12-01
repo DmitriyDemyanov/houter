@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h2 class="title">{{title}}</h2>
+    <h2 class="title" :class="{'text-center': center, 'width': center}">{{title}}</h2>
+    <slot name="buttons"></slot>
   </div>
 </template>
 
@@ -11,6 +12,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    center: {
+      type: Boolean,
+      default: false,
     }
   }
 };
@@ -23,5 +28,13 @@ export default {
   font-size: 32px;
   line-height: 40px;
   color: #1B1C57;
+}
+.width {
+  margin: 0 auto;
+  max-width: 430px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;;
 }
 </style>

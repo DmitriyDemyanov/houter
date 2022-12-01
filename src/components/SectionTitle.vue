@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex align-items-center title">
-    <div class="bar"></div>
+  <div class="d-flex align-items-center title" :class="{ 'flex-column': column}">
+    <div class="bar" :class="{ 'mb-2': column}"></div>
     <p class="text"> {{title}}</p>
   </div>
 
@@ -15,6 +15,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    column: {
+      type: Boolean,
+      default: false
     }
   },
 

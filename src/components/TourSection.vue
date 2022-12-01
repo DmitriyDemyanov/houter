@@ -8,11 +8,10 @@
         curated to become the home of your dreams!
       </p>
       <h5 class="title">House Detail</h5>
-      <div v-for="(item, index) in onHouseRooms" :key="index">
-        <div class="show-room">
-          <ShowRooms :room="item"/>
-        </div>
+      <div class="show-room col-4">
+        <ShowRooms :room="item" v-for="(item, index) in onHouseRooms" :key="index"/>
       </div>
+      <div class="bar"></div>
     </div>
   </div>
 </template>
@@ -58,9 +57,16 @@ export default {
   line-height: 28px;
 }
 .show-room {
-  display: grid;
-  grid-template-columns: 2;
-  height: 300px;
-  background-color: #626687;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+.bar {
+  margin-top: 12px;
+  margin-bottom: 32px;
+  width: 440px;
+  height: 2px;
+  background: #F0F3FD;
 }
 </style>

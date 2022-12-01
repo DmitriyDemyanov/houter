@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="d-flex align-items-center showroom-wrapper">
     <div>
       <img :src="require(`@/assets/${room.img}`)" alt="logo">
     </div>
-    <p>{{room.place}}</p>
-    
+    <p class="text">{{room.place}}</p>
+
   </div>
 </template>
 
@@ -24,5 +24,17 @@ export default {
 
 
 <style scoped>
+.showroom-wrapper {
+  width: 50%;
+  margin-bottom: 25px;
+}
+.text {
+  margin: 0 0 0 20px;
+  color: #3C4563;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
 
+}
 </style>
