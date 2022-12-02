@@ -64,7 +64,6 @@ export default {
       if (text === 'villa') {
         return 'villa';
       }
-      console.log(text);
       return 'apartment';
     }
   },
